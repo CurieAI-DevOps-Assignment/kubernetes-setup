@@ -1,0 +1,20 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: json-server-deployment
+spec:
+  selector:
+    matchLabels:
+      app: json-server-devops-project
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: json-server-devops-project
+    spec:
+      containers:
+      - name: json-server-devops-project
+        image: dhoni/json-server:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080

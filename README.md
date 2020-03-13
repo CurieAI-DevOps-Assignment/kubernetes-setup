@@ -22,3 +22,9 @@
   vagrant ssh node-1
   vagrant ssh node-2
  
+# ## Final step
+ After creating the cluster run the deployment and service playbooks in K8s master node
+ i,e. 
+
+  kubernetes-setup/k8s-deploy-svc/deploment.yml
+  kubernetes-setup/k8s-deploy-svc/service.yml
